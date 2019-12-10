@@ -1,0 +1,13 @@
+<h2>Matches</h2>
+<div class="match">
+    <select (change)="clickSelect($event)">
+        <option>Seleziona match</option>
+        <option [value]="match.name" *ngFor="let match of lista">
+            {{match.name}}
+        </option>
+    </select>
+
+    <button *ngIf="isVisible" (click)="toggleVisibility()">Show All</button>
+    <button *ngIf="!isVisible" (click)="toggleVisibility()">Hide All</button>
+</div>
+

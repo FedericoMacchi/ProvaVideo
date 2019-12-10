@@ -1,0 +1,38 @@
+table{
+    width: 100%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+select{
+    margin-bottom:20px;
+}
+
+.title{
+  color: white;
+  background-color: #343b2c;
+  padding:0 5rem;
+  cursor: pointer;
+}
+
+
+thead{
+    color:white;
+    background-color: brown;
+}
+tbody:nth-child(even){
+        background-color: #d1cbcb;
+    }
+tbody:nth-child(odd){
+        background-color: #d86666;
+    }
+
+tbody{
+    td{
+        width: 30%;
+    }
+}

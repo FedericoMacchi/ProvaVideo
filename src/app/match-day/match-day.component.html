@@ -1,0 +1,21 @@
+<div *ngFor="let match of lista">
+<span class="title"  (click)="toggleSingleVisibility(match)">{{match.name}}</span>
+    <table *ngIf = "match.visibility">
+        <thead>
+            <td>date</td>
+            <td>team1</td>
+            <td>team2</td>
+            <td>score</td>
+        </thead>
+    
+        <tbody *ngFor="let single of match.matches">
+            <tr>
+                <td>{{single.date}}</td>
+                <td>{{single.team1.name}}</td>
+                <td>{{single.team2.name}}</td>
+                <td *ngIf="single.score1!=null">{{single.score1}} - {{single.score2}}</td>
+                <td *ngIf="single.score1==null">/ - /</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
